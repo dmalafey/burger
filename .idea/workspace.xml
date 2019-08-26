@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="499a70e8-94c4-4ee4-86b0-c4d38f5c8549" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/conteiners/Checkout/ContactData/ContactData.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/conteiners/Checkout/ContactData/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/actionBurgerBuilder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/burgerBuilder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/utility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Input/Input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Input/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/axios.orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios-orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItems/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Order/CheskoutSummary/CheckoutSummary.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Order/CheckoutSummary/CheckoutSummary.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Order/CheskoutSummary/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Order/CheckoutSummary/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Order/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/conteiners/BurgerBuilder/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/conteiners/BurgerBuilder/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conteiners/Checkout/ContactData/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/conteiners/Checkout/ContactData/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/conteiners/Checkout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/conteiners/Checkout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conteiners/Orders/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/conteiners/Orders/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionBurgerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionBurgerBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/burgerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/burgerBuilder.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,17 +49,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/conteiners/BurgerBuilder" />
+      <recent name="$PROJECT_DIR$/src/components/Burger" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Order" />
       <recent name="$PROJECT_DIR$/src/components/Order/CheskoutSummary" />
       <recent name="$PROJECT_DIR$/src/components/UI/Spinner" />
       <recent name="$PROJECT_DIR$/src/components/UI/Modal" />
       <recent name="$PROJECT_DIR$/src/components/UI/Button" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets/images" />
-      <recent name="$PROJECT_DIR$/src/conteiners/BurgerBuilder" />
-      <recent name="$PROJECT_DIR$/src/components/Burger" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -148,7 +137,7 @@
       <workItem from="1566328432678" duration="227000" />
       <workItem from="1566479807685" duration="1000" />
       <workItem from="1566767211401" duration="5171000" />
-      <workItem from="1566810031129" duration="4136000" />
+      <workItem from="1566810031129" duration="10907000" />
     </task>
     <servers />
   </component>
