@@ -1,7 +1,7 @@
 import  React from 'react';
 
 import Order from '../../components/Order';
-import axios from '../../axios.orders';
+import axios from '../../axios-orders';
 
 class Orders extends React.Component {
     state = {
