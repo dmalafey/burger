@@ -108,15 +108,15 @@ class ContactData extends Component {
             ingredients: this.props.ings,
             price: this.props.price,
             orderData: formData
-        }
+        };
 
         this.props.onOrderBurger(order);
 
-    }
+    };
 
-    checkValidity(value, rules) {
-        let isValid = true;
-        if (!rules) {
+    static checkValidity(value, rules) {
+       let isValid = true;
+       if (!rules) {
             return true;
         }
 
@@ -153,7 +153,7 @@ class ContactData extends Component {
             ...updatedOrderForm[inputIdentifier]
         };
         updatedFormElement.value = event.target.value;
-        updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+        updatedFormElement.valid = ContactData.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedFormElement.touched = true;
         updatedOrderForm[inputIdentifier] = updatedFormElement;
 
