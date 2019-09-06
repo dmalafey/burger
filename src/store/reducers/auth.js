@@ -13,8 +13,10 @@ const authStart = ( state, action ) => {
 };
 
 const authSuccess = (state, action) => {
+    localStorage.setItem("token",action.idToken);
+
     return updateObject( state, {
-        token: action.idToken,
+        token: "action.idToken",
         userId: action.userId,
         error: null,
         loading: false
@@ -29,7 +31,10 @@ const authFail = (state, action) => {
 };
 
 const authLogout = (state, action) => {
+   localStorage.removeItem("token")
     return updateObject(state, { token: null, userId: null });
+
+
 };
 
 const reducer = ( state = initialState, action ) => {

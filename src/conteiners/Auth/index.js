@@ -6,6 +6,8 @@ import Button from '../../components/UI/Button';
 import Spinner from '../../components/UI/Spinner';
 import classes from './Auth.css';
 import * as actions from '../../store/actions/index';
+import {Redirect} from "react-router-dom";
+import {isAuth} from "../../utility";
 
 class Auth extends Component {
     state = {
@@ -89,6 +91,7 @@ class Auth extends Component {
     submitHandler = ( event ) => {
         event.preventDefault();
         this.props.onAuth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup );
+        //TODO: redirect to the index (main) page. Be aware, auth can be failed
     }
 
     switchAuthModeHandler = () => {
@@ -98,7 +101,10 @@ class Auth extends Component {
     }
 
     render () {
-        const formElementsArray = [];
+        if(isAuth(this.props.token)){
+            return <Redirect to={'/'}/>
+        }
+                             const formElementsArray = [];
         for ( let key in this.state.controls ) {
             formElementsArray.push( {
                 id: key,
@@ -148,7 +154,8 @@ class Auth extends Component {
 const mapStateToProps = state => {
     return {
         loading: state.auth.loading,
-        error: state.auth.error
+        error: state.auth.error,
+        token: state.auth.token
     };
 };
 
