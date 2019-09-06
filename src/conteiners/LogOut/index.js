@@ -1,33 +1,23 @@
 import React from 'react';
-import {Redirect} from "react-router-dom";
-import {connect} from "react-redux";
-import {logout} from "../../store/actions/auth";
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { logout } from '../../store/actions/auth';
 
 class LogOut extends  React.Component{
+    render() {
+        this.props.logOut();
 
-    componentWillMount() {
-
-       // this.props.logOut1();
+        return <Redirect to={'/signin'}/>;
     }
-
-    render(){
-        this.props.logOut1()
-        return (<Redirect to={'/signin'}/>)
-    }
-
-
-
 }
+
 export default connect(
-    state =>({
-        token: state.auth.token
-    } ),
+    undefined,
     dispatch => ({
-        logOut1: () => {
+        logOut: () => {
             dispatch(logout());
         }
     })
-
-
 )(LogOut);
 

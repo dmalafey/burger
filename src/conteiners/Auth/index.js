@@ -6,8 +6,8 @@ import Button from '../../components/UI/Button';
 import Spinner from '../../components/UI/Spinner';
 import classes from './Auth.css';
 import * as actions from '../../store/actions/index';
-import {Redirect} from "react-router-dom";
-import {isAuth} from "../../utility";
+import { Redirect } from "react-router-dom";
+import { isAuth } from "../../utility";
 
 class Auth extends Component {
     state = {
@@ -41,11 +41,12 @@ class Auth extends Component {
                 touched: false
             }
         },
-        isSignup: true
+        isSignup: false
     };
 
-    checkValidity= ( value, rules )=> {
+    checkValidity= ( value, rules ) => {
         let isValid = true;
+
         if ( !rules ) {
             return true;
         }
@@ -64,11 +65,13 @@ class Auth extends Component {
 
         if ( rules.isEmail ) {
             const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            
             isValid = pattern.test( value ) && isValid
         }
 
         if ( rules.isNumeric ) {
             const pattern = /^\d+$/;
+            
             isValid = pattern.test( value ) && isValid
         }
 
@@ -85,26 +88,28 @@ class Auth extends Component {
                 touched: true
             }
         };
+
         this.setState( { controls: updatedControls } );
     }
 
     submitHandler = ( event ) => {
         event.preventDefault();
         this.props.onAuth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup );
-        //TODO: redirect to the index (main) page. Be aware, auth can be failed
     }
 
     switchAuthModeHandler = () => {
         this.setState(prevState => {
-            return {isSignup: !prevState.isSignup};
+            return { isSignup: !prevState.isSignup };
         });
     }
 
     render () {
-        if(isAuth(this.props.token)){
+        if (isAuth(this.props.token)) {
             return <Redirect to={'/'}/>
         }
-                             const formElementsArray = [];
+
+        const formElementsArray = [];
+
         for ( let key in this.state.controls ) {
             formElementsArray.push( {
                 id: key,
@@ -112,7 +117,7 @@ class Auth extends Component {
             } );
         }
 
-        let form = formElementsArray.map( formElement => (
+        let formComponents = formElementsArray.map(formElement => (
             <Input
                 key={formElement.id}
                 elementType={formElement.config.elementType}
@@ -122,10 +127,10 @@ class Auth extends Component {
                 shouldValidate={formElement.config.validation}
                 touched={formElement.config.touched}
                 changed={( event ) => this.inputChangedHandler( event, formElement.id )} />
-        ) );
+        ));
 
         if (this.props.loading) {
-            form = <Spinner />
+            formComponents = <Spinner />
         }
 
         let errorMessage = null;
@@ -140,7 +145,7 @@ class Auth extends Component {
             <div className={classes.Auth}>
                 {errorMessage}
                 <form onSubmit={this.submitHandler}>
-                    {form}
+                    { formComponents }
                     <Button btnType="Success">SUBMIT</Button>
                 </form>
                 <Button
@@ -165,4 +170,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect( mapStateToProps, mapDispatchToProps )( Auth );
+export default connect(mapStateToProps, mapDispatchToProps)(Auth);

@@ -42,4 +42,9 @@
         border-bottom: 4px solid #40A4C8;
         color: white;
     }
+
+    .NavigationItem a.active {
+        cursor: default;
+        border-bottom-color: transparent;
+    }
 }
